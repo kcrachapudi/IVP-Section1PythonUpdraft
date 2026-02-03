@@ -1,0 +1,34 @@
+uv init: Creates a new Python project and sets up the pyproject.toml file.
+uv add <package>: Installs a package and adds it as a dependency to your pyproject.toml file. You can specify version constraints (e.g., uv add "flask>=3.0"), or add to a development group with uv add <package> --dev.
+uv remove <package>: Uninstalls a package and removes it from the project's dependencies in pyproject.toml.
+uv sync: Synchronizes the project's virtual environment with the dependencies specified in the lockfile (uv.lock) or pyproject.toml. This ensures the environment matches the exact versions declared.
+uv lock: Resolves all dependencies and creates a uv.lock file, which guarantees reproducible environments.
+uv run <command>: Executes a command or script within the project's environment. uv automatically locks and syncs the environment before running.
+uv tree: Displays the dependency tree for the project's installed packages.
+uv build: Creates distribution archives (e.g., .whl and .tar.gz files) for your project in a dist/ directory.
+uv publish: Publishes the project to a package index like PyPI. 
+
+Package and Environment Commands
+These commands offer a pip-compatible interface for manual package management and environment creation. 
+
+    uv venv <path>: Creates a new virtual environment at the specified path (e.g., uv venv .venv).
+    uv pip install <package>: Installs packages into the current environment (similar to pip install).
+    uv pip uninstall <package>: Uninstalls packages from the current environment.
+    uv pip freeze: Lists installed packages and their exact versions.
+    uv pip list: Lists installed packages.
+    uv pip compile: Compiles abstract requirements into a locked file.
+    uv pip show <package>: Displays details about an installed package. 
+
+Python Version Management
+uv can also install and manage different Python versions. 
+
+    uv python install <version>: Installs a specific Python version (e.g., uv python install 3.12).
+    uv python list: Shows available and installed Python versions.
+    uv python find: Locates an installed Python version. 
+
+Utility and Management Commands
+
+    uv self update: Updates the uv executable to the latest version.
+    uv cache clean: Removes cache entries.
+    uv version: Displays the currently installed version of uv.
+    uv help <command>: Shows detailed help for a specific command. 
